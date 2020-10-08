@@ -1,18 +1,21 @@
-<?php include 'skeleton/head.html.php'; ?>
+<?php include 'skeleton/header.html.php'; ?>
 
     <main id="main">
+
       <article id="presentation_container">
-        <h1 id="presentation_text">CUIDA EL PLANETA</h1>
+        <h1 id="presentation_title">CUIDAR EL PLANETA</h1>
         <a id="presentation_button" href="#">Leer m&aacute;s</a>
       </article>
 
       <article id="subtitle_container">
         <h2 class="subtitle">OBJETIVOS</h2>
       </article>
+
       <article id="goals_container">
+
         <section class="goal_view">
           <a href="#">
-            <img class="image" src="/img/lynx_pardinus.jpg" alt="lynx_pardinus">
+            <img class="image" src="img/lynx_pardinus.jpg" alt="lynx_pardinus">
           </a>
           <h3 class="goal_title">Salvar al lince ib&eacute;rico</h3>
           <div class="goal_text">
@@ -21,9 +24,10 @@
             <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
         </section>
+
         <section class="goal_view">
           <a href="#">
-            <img class="image" src="/img/plastic_in_the_ocean.jpg" alt="plastic_in_the_ocean">
+            <img class="image" src="img/plastic_in_the_ocean.jpg" alt="plastic_in_the_ocean">
           </a>
           <h3 class="goal_title">Limpiar los oc&eacute;anos</h3>
           <div class="goal_text">
@@ -32,9 +36,10 @@
             <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
         </section>
+
         <section class="goal_view">
           <a href="#">
-            <img class="image" src="/img/reforestation.jpg" alt="reforestation">
+            <img class="image" src="img/reforestation.jpg" alt="reforestation">
           </a>
           <h3 class="goal_title">Reforestar los bosques</h3>
           <div class="goal_text">
@@ -43,8 +48,14 @@
             <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
         </section>
+
       </article>
-      <article class="article_wrapper"></article>
+
+      <article id="quick_view_container">
+        <h1 id="quick_view_text">RESPETAR LOS ECOSISTEMAS</h1>
+        <a id="quick_view_button" href="#">Leer m&aacute;s</a>
+      </article>
+
     </main>
 
-<?php include 'skeleton/foot.html.php'; ?>
+<?php include 'skeleton/footer.html.php'; ?>

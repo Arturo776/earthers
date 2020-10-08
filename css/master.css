@@ -2,6 +2,7 @@
   --Assistant: 'Assistant', sans-serif;
   --Poppins: 'Poppins', sans-serif;
   --Playfair-Display: 'Playfair Display', serif;
+  --Antic-Slab: 'Antic Slab', serif;
 }
 
 * {
@@ -9,39 +10,71 @@
   margin: 0;
 }
 
-#header {
+#header, #footer {
   display: flex;
-  padding: 0 4em;
-  box-shadow: 0px 5px 15px 10px lightgray;
+  justify-content: space-between;
+  padding: 2em 4em;
+}
+
+#header{
+  box-shadow: 0px 2px 15px 10px #aaa;
 }
 
 #title_container {
   padding: 0 4em;
 }
 
-#title_container, #links_container {
+#title, #footer_title {
+  color: #232323;
+  font-size: 30px;
+}
+
+#title, #footer_title {
+  font-family: var(--Assistant);
+}
+
+#title_container, #frontbar_link_container, #footer_link_container, #sign_in_container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-#presentation_text, #title, .subtitle, .goal_title {
+#presentation_title, #title, .subtitle, .goal_title, #quick_view_text, .formulary_title, .label {
   cursor: default;
 }
 
-#title, .frontbar_link {
-  color: #010101;
-  font-family: var(--Assistant);
-}
-
-#title {
-  font-size: 30px;
-}
-
 #presentation_container {
-  background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2017/04/22/1086857/48df69b50d7601215c6509cb7bd6ab69-1000.jpg");
-  padding: 4em;
+  background-image: url("../img/deep_forest.jpg");
+}
+
+#presentation_container, #quick_view_container {
+  padding: 5em;
   text-align: center;
+}
+
+#presentation_title, #presentation_button, #quick_view_text, #quick_view_button, .formulary_title {
+  font-family: var(--Poppins);
+}
+
+#presentation_button, #quick_view_button {
+  font-weight: lighter;
+}
+
+#presentation_title, #quick_view_text {
+  padding-bottom: 1em;
+  font-size: 70px;
+  color: white;
+}
+
+#presentation_button, #quick_view_button {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  background: rgba(255, 165, 0, 0.5);
+  padding: 0.5em;
+  transition: background 0.5s;
+} #presentation_button:hover, #quick_view_button:hover {
+  background: orange;
 }
 
 #subtitle_container {
@@ -49,63 +82,133 @@
   padding: 4em 0;
 }
 
-#goals_container {
+#goals_container, #formulary_container {
   display: flex;
   justify-content: space-around;
 }
 
-#presentation_text, #presentation_button {
-  font-family: var(--Poppins);
-}
-
-#presentation_button {
-  font-weight: lighter;
-}
-
-#presentation_text {
-  padding-bottom: 1em;
-  font-size: 70px;
-  color: white;
-}
-
-#presentation_button {
-  font-size: 20px;
-  color: white;
-  text-decoration: none;
-  background: rgba(255, 165, 0, 0.5);
-  padding: 0.5em;
-  transition: background 0.5s;
-} #presentation_button:hover {
-  background: orange;
-}
-
 #goals_container {
-  padding: 0 4em;
+  padding: 0 4em 4em 4em;
 }
 
-.frontbar_link {
-  padding: 2em 1em;
+#quick_view_container {
+  background-image: url("../img/river_landscape2.jpg");
+}
+
+#footer_title {
+  font-style: italic;
+  font-size: 20px;
+}
+
+#formulary_main {
+  background-image: url("../img/login_background.jpg");
+}
+
+#formulary_container {
+  padding: 5em 0;
+}
+
+#sign_in_formulary {
+  padding: 0 2em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 3%;
+  background: rgba(200, 200, 200, 0.2);
+  border: 1px solid #fff;
+}
+
+#form_button {
+  padding: 0.5em 0;
+  margin-top: 2em;
+  background: transparent;
+  font-family: var(--Poppins);
   font-size: 15px;
+  transition: border-color 0.5s, color 0.5s;
+  border: 2px solid #fff;
+  border-style: solid none solid none;
+  color: #fff;
+} #form_button:hover {
+  cursor: pointer;
+  color: orange;
+  border-color: orange;
+}
+
+#formulary_title_container {
+  padding-top: 5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.formulary_title {
+  font-size: 70px;
+  text-align: center;
+  color: #fff;
+}
+
+.formulary_link {
+  text-align: center;
+  color: #fff;
   text-decoration: none;
-  transition: color 0.3s;
-} .frontbar_link:hover {
+  font-size: 12px;
+  font-family: var(--Playfair-Display);
+  transition: color 0.5s;
+  padding: 1em 0;
+} .formulary_link:hover {
   color: orange;
 }
 
+.label {
+  color: #fff;
+}
+
+.error {
+  border: 1px solid red;
+}
+
+.label, .input {
+  padding: 1em 0.5em;
+  font-family: var(--Playfair-Display);
+}
+
+.label, .input, .form_button {
+  text-align: center;
+}
+
+.footer_link {
+  padding: 0 1em;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.5s;
+}
+
+.frontbar_link {
+  padding: 0 1em;
+  font-size: 15px;
+  text-decoration: none;
+  transition: color 0.3s;
+} .frontbar_link:hover, .footer_link:hover {
+  color: orange;
+}
+
+.frontbar_link, .footer_link {
+  color: #010101;
+  font-family: var(--Assistant);
+}
+
 .goal_view {
-  padding: 0 4em;
+  padding: 0 4em 1em 4em;
   text-align: center;
 }
 
 .subtitle {
   color: #535353;
-  font-family: var(--Assistant);
+  font-family: var(--Antic-Slab);
   font-weight: lighter;
   font-size: 20px;
 }
 
 .goal_title {
-  padding: 1.5em 0;
+  padding: 1em 0;
   color: #424242;
   font-size: 25px;
   font-family: var(--Playfair-Display);
@@ -113,13 +216,12 @@
 }
 
 .goal_text {
-  padding: 1.5em;
+  padding: 1em 0;
   cursor: default;
   text-indent: 1em;
   font-size: 15px;
   text-align: justify;
   font-family: var(--Assistant);
-  box-shadow: 0px 2px 10px 1px lightgray;
 }
 
 .image {
@@ -130,16 +232,23 @@
   transition: border-radius 0.5s;
 } .image:hover {
   border-radius: 2%;
+  border: 1px solid orange;
+  border-style: none solid none solid;
 }
 
 .article_wrapper {
-  padding: 4em 0;
+  padding: 3em 0;
 }
 
 .text_wrapper {
-  padding: 0.5em 0;
+  padding: 1em 0;
 }
 
 .inline_wrapper {
   display: flex;
+}
+
+.leaf {
+  color: darkgreen;
+  font-size: 25px;
 }
